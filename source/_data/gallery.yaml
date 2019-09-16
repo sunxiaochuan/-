@@ -1,0 +1,12 @@
+# 图片名字
+# 完整图片的地址
+# 图片缩略图的地址，如果没有缩略图也可使用完整图片的地址
+# 这是一个描述 为图片描述
+众易贷LOGO:
+    full_link: https://m.hizyd.com/Images/Home/white.png
+    thumb_link: https://m.hizyd.com/Images/Home/white.png
+    descr: "众易贷网站logo"
+京东测试用图:
+    full_link: https://img20.360buyimg.com/mobilecms/s1000x1000_jfs/t11188/170/887781220/107740/c8108b09/59fac227N9a26d2da.jpg!q90.webp
+    thumb_link: https://img20.360buyimg.com/mobilecms/s280x280_jfs/t11188/170/887781220/107740/c8108b09/59fac227N9a26d2da.jpg!q90.webp
+    descr: "众易贷网站logo"
