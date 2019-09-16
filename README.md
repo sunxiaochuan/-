@@ -1,5 +1,5 @@
 # blogapp
-一个基于 Hexo 又添加了 hexo-theme-material 主题的博客框架，已经可以自行直接写日志了噢~
+一个基于 Hexo 又添加了 hexo-theme-material(之前用的是这个) 和 hexo-theme-next(目前选择的是这个) 主题的博客框架，已经可以自行直接写日志了噢~
 # 运行命令
 ```
 # 如果未安装命令
