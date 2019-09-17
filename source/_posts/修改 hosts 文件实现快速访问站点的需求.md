@@ -13,17 +13,17 @@ categories: [软件/包的基础操作]
 
 * 在本机找到 `hosts` 文件
 
-  > ![image.png](https://upload-images.jianshu.io/upload_images/9064013-ef057a0d37f0e23f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+  > {% asset_img hosts文件目录地址.png "hosts文件目录地址" %}
 
 * 将其拖拽至代码编辑器中进行编辑
 
-  > ![image.png](https://upload-images.jianshu.io/upload_images/9064013-6ac483af417d32c3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+  > {% asset_img 编辑hosts文件.png "编辑hosts文件" %}
 
 * 如上图：重点是最后一行，写法如下
 
-```
-ip地址     域名
-```
+  ```shell
+  ip地址     域名
+  ```
 
 * 在浏览器中测试结果
-  > ![image.png](https://upload-images.jianshu.io/upload_images/9064013-f7674184da00866b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+  > {% asset_img 浏览器测试.png "浏览器测试" %}

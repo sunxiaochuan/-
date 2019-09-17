@@ -11,15 +11,16 @@ categories: [代码/技能进阶]
 
 * 安装依赖 clipboard.js
 
-  ```
+  ```shell
   npm install clipboard --save
   ```
 
 * 在需要使用的地方 require 引用
 
-  ```
+  ```shell
   var clipboard = require('clipboard');
   ```
 
 * 在页面加载后调用该方法即可
-  > ![image.png](https://upload-images.jianshu.io/upload_images/9064013-f3d7d4e56d786d10.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+  > {% asset_img 使用示例.png "使用示例" %}
+  

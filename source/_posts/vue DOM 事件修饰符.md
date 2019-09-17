@@ -5,9 +5,9 @@ tags: [vue-cli,vue,技巧,框架,三大框架之一]
 categories: [代码/技能进阶]
 ---
 
-## DOM 事件修饰符
+- DOM 事件修饰符
 
-    ```
+    ```html
     <!-- 阻止单击事件继续传播 -->
     <a v-on:click.stop="doThis"></a>
 
@@ -29,5 +29,5 @@ categories: [代码/技能进阶]
     <div v-on:click.self="doThat">...</div>
     ```
 
-* 示例，如下图所示，这样写的话点击了 li 内部的元素的话不会影响 li 的 click 的点击事件
-  > ![image.png](https://upload-images.jianshu.io/upload_images/9064013-9a06bab7ca000e27.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+- 示例，如下图所示，这样写的话点击了 li 内部的元素的话不会影响 li 的 click 的点击事件
+  > {% asset_img 使用示例.png "使用示例" %}

@@ -10,53 +10,51 @@ categories: [代码/技能进阶]
 > [原文地址](https://www.aaa1a.xyz/movie/guochanzipai/bc1c9e69d117b5c3be822ca22b137f08.html)
 > vue-cli 构建的项目默认是不支持 less 的，需要自己添加。
 
-* 首先安装 less 和 less-loader ，在项目目录下运行如下命令
+- 首先安装 less 和 less-loader ，在项目目录下运行如下命令
 
-```
-# npm安装
-$ npm install less less-loader --save-dev
-# 或者使用 yarn
-$ yarn add less less-loader --dev
-```
+  ```shell
+  # npm安装
+  npm install less less-loader --save-dev
+  # 或者使用 yarn
+  yarn add less less-loader --dev
+  ```
 
-* 安装成功后，打开 `build/webpack.base.conf.js` ，在 module.exports = 的对象的 module.rules 后面添加一段：
+- 安装成功后，打开 `build/webpack.base.conf.js` ，在 `module.exports = `对象的 `module.rules` 后面添加一段：
 
-```
-module.exports = {
-    //  此处省略无数行，已有的的其他的内容
-    module: {
-        rules: [
-          //  此处省略无数行，已有的的其他的规则
-          {
-            test: /\.less$/,
-            loader: "style-loader!css-loader!less-loader",
-          }
-        ]
-    }
-}
-```
+  ```shell
+  module.exports = {
+      //  此处省略无数行，已有的的其他的内容
+      module: {
+          rules: [
+            //  此处省略无数行，已有的的其他的规则
+            {
+              test: /\.less$/,
+              loader: "style-loader!css-loader!less-loader",
+            }
+          ]
+      }
+  }
+  ```
+  > {% asset_img 使用示例1.png "使用示例1" %}
 
-> ![image.png](https://upload-images.jianshu.io/upload_images/9064013-95d3d7b8e6322323.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+- 最后在 `.vue` 页面代码中的 style 标签中 加上 lang="less" 属性即可
 
-* 最后在代码中的 style 标签中 加上 lang="less" 属性即可
+  ```vue
+  <style scoped lang="less">
 
-```
-<style scoped lang="less">
+  </style>
+  ```
+  > {% asset_img 使用示例2.png "使用示例2" %}
 
-</style>
-```
+- 之后在项目中测试是否成功
 
-> ![image.png](https://upload-images.jianshu.io/upload_images/9064013-e3209b87b6bb3246.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+  ```shell
+  npm install less less-loader --save-dev
+  npm run dev
+  ```
+  > {% asset_img 命令行编译结果.png "命令行编译结果" %}
 
-* 之后在项目中测试是否成功
-
-```
-npm install less less-loader --save-dev
-npm run dev
-```
-
-> ![image.png](https://upload-images.jianshu.io/upload_images/9064013-dcf44d997dfc0d6f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
-* 在浏览其中打开相应页面，这个页面是 `/` 根页面点击跳转过来的子路由
-  > ![image.png](https://upload-images.jianshu.io/upload_images/9064013-474597ff79c71913.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240) > ![image.png](https://upload-images.jianshu.io/upload_images/9064013-3a535950b2f0d7c4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+- 在浏览其中打开相应页面，这个页面是 `/` 根页面点击跳转过来的子路由
+  > {% asset_img 测试效果1.png "测试效果1" %}
+  > {% asset_img 测试效果2.png "测试效果2" %}
   > 可以看到样式编译成功了 哦耶~

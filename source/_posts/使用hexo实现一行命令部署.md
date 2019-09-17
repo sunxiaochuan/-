@@ -76,7 +76,7 @@ categories: [软件/包的基础操作]
         vim /etc/nginx/nginx.conf
         ```
     - 主要是修改 `http -> server -> root` 的配置
-        >{% asset_img nginx配置示例.png "nginx配置示例" %}
+    	>{% asset_img nginx配置示例.png "nginx配置示例" %}
     - 之后需要重启 `nginx` 服务，切记：每次修改配置文件，服务都要手动重启一下
         ```shell
         nginx -s reload

@@ -9,13 +9,13 @@ categories: [代码/技能进阶]
 
 * 安装
 
-```
-npm install jquery --save
-```
+  ```shell
+  npm install jquery --save
+  ```
 
 * 配置
-
-  > ![image.png](https://upload-images.jianshu.io/upload_images/9064013-bda0fe1d615d066a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240) > ![image.png](https://upload-images.jianshu.io/upload_images/9064013-c6610e7d98d022b9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+  > {% asset_img 配置1.png "配置1" %}
+  > {% asset_img 配置2.png "配置2" %}
 
   ```javascript
   // 先在顶部引入 webpack
@@ -30,4 +30,4 @@ npm install jquery --save
   ```
 
 * 使用
-  > ![image.png](https://upload-images.jianshu.io/upload_images/9064013-6fd32a4cc2e690dc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+  > {% asset_img 使用.png "使用" %}
