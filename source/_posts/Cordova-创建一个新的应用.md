@@ -6,11 +6,11 @@ categories: []
 ---
 
 
-#资料
+# 资料
 >[Cordova 官网文档](https://cordova.apache.org/docs/en/latest/guide/cli/index.html) 详细的文档可点击查看
 
-#正文
-###1.  环境配置
+# 正文
+### 1.  环境配置
 1.  前提条件（我的是 windows 系统）
 -  安装 [nodejs](http://nodejs.cn/download/)
 -  安装 [Android Studio](https://developer.android.com/studio/)
@@ -26,7 +26,7 @@ JAVA_HOME -> D:\Program Files\Java\jdk
 Path -> 追加(注意分号) D:\Program Files\Java\jdk\bin;
 ```
 -  配好了上述的环境变量之后，才可以使用相关的命令行噢~，可自行在命令行使用 `java` 和 `javac` 进行测试是否配置成功
-###2.  创建应用
+### 2.  创建应用
 1.  命令行依次输入以下命令，启动项目
 ```shell
 # 全局安装 `Cordova CLI`

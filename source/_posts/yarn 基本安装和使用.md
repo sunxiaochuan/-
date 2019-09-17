@@ -22,13 +22,13 @@ categories: [软件/包的基础操作]
   > 如果你使用安装程序的方式，你需要首先安装  [Node.js](https://nodejs.org/)
 * 这里我使用的是 npm 的安装方式
 
-```
+```shell
 npm install -g yarn
 ```
 
 * 查看是否安装成功
 
-```
+```shell
 yarn -v
 ```
 
@@ -36,7 +36,7 @@ yarn -v
 
 * 常用命令
 
-```
+```shell
 # 初始化一个项目
 yarn init
 # 装包

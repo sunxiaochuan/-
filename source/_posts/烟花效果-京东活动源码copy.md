@@ -6,7 +6,7 @@ categories: [showcase]
 ---
 
 >出处：copy 京东一活动源码
-##源码
+## 源码
 ```
 <!DOCTYPE html>
 <html lang="en">
@@ -347,5 +347,5 @@ frame();
 </body>
 </html>
 ```
-##效果图
+## 效果图
 >![14.gif](http://upload-images.jianshu.io/upload_images/9064013-8fe8bfc34c1cf0b3.gif?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
