@@ -20,6 +20,9 @@ categories: [软件/包的基础操作]
   import 'bootstrap' // 引入 bootstrap
   ```
 
+<!-- more -->
+
+
 # 资料
 > [官方文档](https://v4.bootcss.com/docs/4.0/getting-started/introduction/)
 # 正文

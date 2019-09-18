@@ -13,6 +13,9 @@ categories: [代码/技能进阶,一灯学堂]
 
 > 语义化是为了更好的 [seo 搜索引擎优化](https://baike.baidu.com/item/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E4%BC%98%E5%8C%96/3132?fromtitle=seo&fromid=102990&fr=aladdin)
 
+<!-- more -->
+
+
 # 需要注意的地方
 
 1.  使用 `div` 来进行布局，不要用 `div` 进行无意义的包裹（比如：段落文字之类的要使用 `p` 标签），尽量也不要用无意义的标签 span

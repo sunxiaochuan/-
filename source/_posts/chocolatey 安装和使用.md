@@ -15,25 +15,28 @@ categories: [软件/包的基础操作]
 
 * 打开命令行工具输入以下命令，即可自行安装，需稍作等待安装时间，期间可能会被 360 杀毒软件拦截，允许全部 即可
 
-```
-@"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
-```
+  ```shell
+  @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
+  ```
+
+<!-- more -->
+
 
 # 使用
 
 * 这里以安装 yarn 为例
 
-```
-# 查看是否安装成功
-choco -v
-choco  install yarn
-```
+  ```shell
+  # 查看是否安装成功
+  choco -v
+  choco  install yarn
+  ```
 
 * 常用命令行
 
-```
-#  安装
-choco install
-# 升级
-choco  upgrade
-```
+  ```shell
+  #  安装
+  choco install
+  # 升级
+  choco  upgrade
+  ```

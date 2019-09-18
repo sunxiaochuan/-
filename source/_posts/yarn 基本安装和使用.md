@@ -16,6 +16,9 @@ categories: [软件/包的基础操作]
 
 > [yarn 与 npm 的命令行小结](http://www.jb51.net/article/95199.htm)
 
+<!-- more -->
+
+
 # 安装
 
 * 前提

@@ -9,12 +9,16 @@ categories: [代码/技能进阶]
 # 资料
 >[参考地址](https://blog.csdn.net/u012157999/article/details/53150845)
 [插件 github 地址](https://github.com/kartik-v/bootstrap-fileinput)
+
 # 装包
   ```shell
   npm install bootstrap-fileinput bootstrap --save
   ```
 # 演示 gif 因为接口的原因失败了，但是并不影响示例的过程 
 > {% asset_img 演示效果图1.gif "演示效果图1" %}
+
+<!-- more -->
+
 
 # 示例源码
 -  `vue -> template` 部分代码

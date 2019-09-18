@@ -11,6 +11,9 @@ categories: []
 
 # 正文
 ### 1.  环境配置
+
+<!-- more -->
+
 1.  前提条件（我的是 windows 系统）
 -  安装 [nodejs](http://nodejs.cn/download/)
 -  安装 [Android Studio](https://developer.android.com/studio/)

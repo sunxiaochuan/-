@@ -19,6 +19,9 @@ categories: [代码/技能进阶]
   yarn add less less-loader --dev
   ```
 
+<!-- more -->
+
+
 - 安装成功后，打开 `build/webpack.base.conf.js` ，在 `module.exports = `对象的 `module.rules` 后面添加一段：
 
   ```shell

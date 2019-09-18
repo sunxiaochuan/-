@@ -18,6 +18,9 @@ categories: [服务器]
   # LANG=en_US.UTF-8
   ```
 
+<!-- more -->
+
+
 * 之后修改 `/etc/profile` 文件
 
   ```shell

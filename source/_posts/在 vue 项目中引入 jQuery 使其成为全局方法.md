@@ -14,6 +14,9 @@ categories: [代码/技能进阶]
   ```
 
 * 配置
+
+<!-- more -->
+
   > {% asset_img 配置1.png "配置1" %}
   > {% asset_img 配置2.png "配置2" %}
 

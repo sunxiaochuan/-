@@ -7,6 +7,9 @@ categories: [showcase]
 
 > 出处：copy 京东一活动源码
 
+<!-- more -->
+
+
 - 源码
 	```html
 	<!DOCTYPE html>

@@ -16,6 +16,9 @@ cd blog
 npm install
 hexo server
 ```
+
+<!-- more -->
+
 # 问题修复
 ## 1. jQuery 引入失败
 -  问题截图

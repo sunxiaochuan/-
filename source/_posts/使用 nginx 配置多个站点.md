@@ -16,6 +16,9 @@ categories: [服务器]
 * 我的本机是 `windows` 系统，使用的是 `Xshell` 软件登录 远程服务器
 * 本机安装的是 `cmder` 软件，使得可以在本机使用 `shell` 命令行
 
+<!-- more -->
+
+
 # 开始操作
 
 > 我的笔记：[Linux 命令行操作（持续更新）](https://www.jianshu.com/p/64a7ab15358c)
