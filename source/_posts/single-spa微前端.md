@@ -5,6 +5,8 @@ tags: [single-spa,微前端]
 categories: [软件/包的基础操作]
 ---
 
+<img src="https://camo.githubusercontent.com/5082953bc69645086be2b2ac5e1a8fa20eff0314/68747470733a2f2f73696e676c652d7370612e6a732e6f72672f696d672f6c6f676f2d77686974652d6267626c75652e737667" width="200" height="200" data-canonical-src="https://single-spa.js.org/img/logo-white-bgblue.svg" style="max-width:100%;">
+
 # 参考资料
 >[single-spa github地址](https://github.com/CanopyTax/single-spa)
 [single-spa 官网地址](https://single-spa.js.org/)
@@ -13,6 +15,8 @@ categories: [软件/包的基础操作]
 # 正文
 ## single-spa 是什么？
 ### 官方介绍百度直译
+
+<!-- more -->
 
 >说明
 >single spa是一个javascript库，允许许多小应用程序在一个页面应用程序中共存。这个网站是一个演示应用程序，展示了什么单一应用可以做。有关single spa的更多信息，请转到 [single-spa Github page](https://github.com/CanopyTax/single-spa) 页面。
