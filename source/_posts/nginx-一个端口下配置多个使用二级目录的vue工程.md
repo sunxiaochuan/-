@@ -69,19 +69,16 @@ server {
   index      index.html index.htm;      # 默认导航页
 
   location / {
-      root /home/test/html;
       index index.html;
       try_files $uri $uri/ /index.html;
   }
 
   location /test1 {
-      root /home/test/html/;
       index index.html;
       try_files $uri $uri/ /test1/index.html;
   }
 
   location /custInfo {
-      root /home/test/html/;
       index index.html;
       try_files $uri $uri/ /custInfo/index.html;
   }
