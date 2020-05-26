@@ -13,12 +13,18 @@ hexo server
 ```
 # 新增 .md 日志，新增之后会在 source -> _posts 目录下自动生成一个 新的 .md 文件，和同名称的目录(放置 .md 编辑时所需要用到的静态资源)，layout 非必填项，默认使用 post 布局
 hexo new [layout] 日志名称
+
 # 本地静态资源打包
 hexo g
+
 # 清除本地打包的静态资源
 hexo clean
+
 # 部署，这个需要看官方文档 https://hexo.io/zh-cn/docs/deployment 做配置之后，才能真正的配置成功的
 hexo d
+
+# 打包 + 部署
+hexo g -d
 ```
 # 资料
 [hexo 官方中文文档](https://hexo.io/zh-cn/)
