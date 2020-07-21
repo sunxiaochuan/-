@@ -8,6 +8,9 @@ categories: [软件/包的基础操作]
 >[`uni-app` 官网](https://uniapp.dcloud.net.cn/)
 
 ## 正文
+
+<!-- more -->
+
 ### 1.  基本创建并启动工程操作
 >[原文地址](https://uniapp.dcloud.net.cn/quickstart?id=_2-%e9%80%9a%e8%bf%87vue-cli%e5%91%bd%e4%bb%a4%e8%a1%8c)
 -  项目的创建
