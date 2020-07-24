@@ -38,8 +38,6 @@ categories: [软件/包的基础操作]
 -  由于我安装的 `sass-loader` 是 `9.0.2` 版本的，导致无法正常编译，报错信息 `options has an unknown property 'prependData'. These properties are valid:`，解决方法修改版本号 `9.0.2 => 8.0.2`，重新安装依赖
     >[该问题参考文章："【已解决】uniapp项目,通过cli指令新建的项目,在任意页面style标签使用lang="scss"报错:options has an unknown property 'prependData'"](https://ask.dcloud.net.cn/question/101104)
 
-
-
 ### 3.  微信小程序底部的 `icon` 
 
 1.   `icon` 尺寸需要是 `81*81` 的，不然会非常模糊尺寸需要是 `81*81` 的，不然会非常模糊
@@ -50,3 +48,89 @@ categories: [软件/包的基础操作]
 2.   `icon` 的周围要适当的留白，不能全部填满，不然不好看
         -  示意图，如下所示对比非常的明显
         {% asset_img 示意图.png "示意图" %}
+
+### 4.  微信小程序相关的语法，在应用中中需要注意的地方
+
+1.  `image` 标签高度随宽度自适应
+    ```html
+    <image mode="widthFix" />
+    ```
+
+2.  `image` 标签宽高自适应铺满，但是会裁切掉部分的图片
+    ```html
+    <image mode="aspectFill" />
+    ```
+
+### 5.  为 `H5` 方式的服务，设置代理，防止浏览器拦截接口请求
+
+1.  `manifest.json` 文件，增加 h5特有相关 配置
+    ```json
+	/* h5特有相关 */
+	"h5": {
+		"devServer": {
+			"port": 8000, //端口号
+			"disableHostCheck": true,
+			"proxy": {
+				"/api": {
+					"target": "http://xxxx.cn", //目标接口域名
+					"ws": true, // proxy websockets
+					"changeOrigin": true, //是否跨域
+					"pathRewrite": {
+						"^/api": ""
+					}
+				}
+			}
+		}
+	}
+    ```
+-  使用演示
+    ```javascript
+    wx.request({
+    url: "api/xxxxx",
+    success(res) {
+        console.log(res)
+    }
+    })
+    ```
+
+2.  需要注意的是，这样写微信小程序是不会识别的，所以还需要使用官方文档中的 [条件编译](https://uniapp.dcloud.io/platform?id=%e6%9d%a1%e4%bb%b6%e7%bc%96%e8%af%91) 的方式来进行处理，下文中可查看具体的使用方式
+
+
+### 6.  使用 `条件编译` 的方式，对某个平台单独设置
+
+1.  完善上方接口请求方式
+-  `main.js` 文件，增加全局变量（也可以在 `APP.vue` 文件中使用 `globalData` 的方式增加全局变量）
+    ```javascript
+    // 条件编译，设置相应环境的变量值 https://uniapp.dcloud.io/platform?id=%e6%9d%a1%e4%bb%b6%e7%bc%96%e8%af%91
+    // #ifdef  MP-WEIXIN
+    // 接口请求地址
+    Vue.prototype.APINAME = "http://xxx.cn"
+    // #endif
+
+    // #ifdef  APP-PLUS || H5
+    // 使用 manifest.json 中的 devServer 代理配置，防止浏览器阻拦接口请求
+    Vue.prototype.APINAME = "api"
+    // #endif
+    ```
+-  使用演示
+    ```javascript
+    wx.request({
+    url: `${this.APINAME}/xxxxx`,
+    success(res) {
+        console.log(res)
+    }
+    })
+    ```
+
+2.  在样式代码中使用条件编译
+    >由于 `100vh` 在微信小程序和 `H5` 两个环境中不一样的问题，才有了这样的需求
+    
+    ```scss
+    .home {
+    // 小程序使用
+    height: 100vh;
+    // #ifdef  H5
+    // 减去顶部标题的高度，会覆盖上方的设置
+    height: calc(100vh - 44px);
+    }
+    ```
