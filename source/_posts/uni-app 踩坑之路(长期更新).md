@@ -61,6 +61,158 @@ categories: [软件/包的基础操作]
     <image mode="aspectFill" />
     ```
 
+3.  `scroll-view` 页面下拉滚动组件
+    ```vue
+    <template lang="pug">
+        scroll-view.home(@scrolltolower="handelToLower" scroll-y)
+    </template>
+
+    <script>
+        export default {
+            methods: {
+                /**
+                * 页面内容滚动到底部 回调函数
+                */
+                handelToLower() {
+                   console.log("到底部啦！");
+                }
+            },
+        }
+    </script>
+    ```
+    -  `scss` 需要特殊设置
+        ```scss
+        .home {
+        // 小程序使用
+        height: 100vh;
+        // #ifdef  H5
+        // 减去顶部标题和底部导航的高度，与微信小程序保持一致，会覆盖上方的设置
+        height: calc(100vh - 44px - 50px);
+        }
+        ```
+
+4.  `swiper` 轮播图组件
+    ```vue
+    <template lang="pug">
+        swiper(autoplay indicator-dots circular)
+            swiper-item(v-for='item in bannerList' :key="item.url")
+            image(:src="item.url")
+    </template>
+
+    <script>
+        export default {
+            data() {
+                return {
+                    bannerList: [
+                        {
+                        url:
+                            "https://img.alicdn.com/tfs/TB1g4DmcggP7K4jSZFqXXamhVXa-520-280.jpg_q90_.webp"
+                        },
+                        {
+                        url:
+                            "https://img.alicdn.com/simba/img/TB13oCCSpXXXXctaXXXSutbFXXX.jpg"
+                        },
+                        {
+                        url:
+                            "https://img.alicdn.com/simba/img/TB1b2svaODsXe8jSZR0SutK6FXa.jpg"
+                        },
+                        {
+                        url:
+                            "https://img.alicdn.com/simba/img/TB1x3imuXY7gK0jSZKzSuuikpXa.jpg"
+                        },
+                        {
+                        url:
+                            "https://img.alicdn.com/tfs/TB18NsRcsVl614jSZKPXXaGjpXa-520-280.jpg_q90_.webp"
+                        }
+                    ]
+                };
+            }
+        };
+    </script>
+    ```
+    -  `scss` 需要特殊处理一下
+        ```scss
+        .swiper-content {
+        swiper {
+            // 1.9 是 banner 图片的宽高比例 520/280 = 1.8571428571428572
+            height: calc(750rpx / 1.9);
+            image {
+            height: 100%;
+            }
+        }
+        }
+        ```
+
+5.  `uni-segmented-control` 分段器组件
+    ```vue
+    <template lang="pug">
+        .home-tab
+            .tab-title-list
+            uni-segmented-control(:current="current" :values="items.map(v => v.title)" @clickItem="onClickItem" style-type="text" active-color="#2b7bff")
+            .tab-title-search
+        .home-content
+            home-recommend(v-if="current === 0")
+            home-category(v-if="current === 1")
+            home-new(v-if="current === 2")
+            home-album(v-if="current === 3")
+    </template>
+
+    <script>
+        import homeAlbum from "@/pages/home/home-album";
+        import homeCategory from "@/pages/home/home-category";
+        import homeNew from "@/pages/home/home-new";
+        import homeRecommend from "@/pages/home/home-recommend";
+        import { uniSegmentedControl } from "@dcloudio/uni-ui";
+        export default {
+            components: {
+                homeAlbum,
+                homeCategory,
+                homeNew,
+                homeRecommend,
+                uniSegmentedControl
+            },
+            data() {
+                return {
+                    items: [
+                        {
+                        title: "推荐"
+                        },
+                        {
+                        title: "分类"
+                        },
+                        {
+                        title: "最新"
+                        },
+                        {
+                        title: "专辑"
+                        }
+                    ],
+                    current: 0
+                };
+            },
+            methods: {
+                /**
+                * tab 切换 回调函数
+                */
+                onClickItem(e) {
+                    if (this.current !== e.currentIndex) {
+                        this.current = e.currentIndex;
+                    }
+                }
+            }
+        };
+    </script>
+    ```
+
+6.  `navigator` 链接跳转功能
+    ```vue
+    <template lang="pug">
+        navigator(url="/pages/home/home-album/details")
+            text 测试
+    </template>
+    ```
+    >这个跳转的地址与 `pages.json` 中设置的 `pages => path` 属性值保持一致。需要注意的是：不可以和 `tabBar` 中使用的 `pagePath` 一致，否则无效。
+
 ### 5.  为 `H5` 方式的服务，设置代理，防止浏览器拦截接口请求
 
 1.  `manifest.json` 文件，增加 h5特有相关 配置
