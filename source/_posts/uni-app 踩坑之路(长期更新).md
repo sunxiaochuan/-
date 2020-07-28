@@ -90,6 +90,8 @@ categories: [软件/包的基础操作]
         height: calc(100vh - 44px - 50px);
         }
         ```
+    -  当内部内容有 `flex` 布局的话，需要在属性中增加 `enable-flex`，否则无效
+    
 
 4.  `swiper` 轮播图组件
     ```vue
@@ -212,6 +214,24 @@ categories: [软件/包的基础操作]
     </template>
     ```
     >这个跳转的地址与 `pages.json` 中设置的 `pages => path` 属性值保持一致。需要注意的是：不可以和 `tabBar` 中使用的 `pagePath` 一致，否则无效。
+
+7.  `text` 标签可以识别数据中的转义字符，如 `\n` 会识别为换行符
+
+8.  `video` 标签
+    -   视频预览图充满整个容器的属性，默认是正常的比例展示的
+        ```vue
+        video(objectFit="fill")
+        ```
+    -   `muted` 这个 `Boolean` 属性控制视频的声音开关
+        ```vue
+        video(:muted="false")
+        ```
+
+9.  `button` 标签
+    -   设置分享，使用微信小程序的内置功能
+        ```vue
+        button(open-type="share") 分享
+        ```
 
 ### 5.  为 `H5` 方式的服务，设置代理，防止浏览器拦截接口请求
 
