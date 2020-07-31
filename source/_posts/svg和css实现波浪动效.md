@@ -1,5 +1,5 @@
 ---
-title: svg + css 实现波浪动效
+title: svg和css实现波浪动效
 date: 2020-07-31 11:31:39
 tags: [svg,css,动画]
 categories: [CSS 武艺]
@@ -11,8 +11,7 @@ categories: [CSS 武艺]
 <!-- more -->
 
 -  效果 gif 图
-    >{% asset_img svg + css 实现波浪.gif "svg + css 实现波浪" %}
-    ![svg + css 实现波浪.gif](https://upload-images.jianshu.io/upload_images/9064013-9ab224fb37f5bbd3.gif?imageMogr2/auto-orient/strip)
+    >{% asset_img svg和css实现波浪动效.gif "svg和css实现波浪动效" %}
 
 
 ## 源码
