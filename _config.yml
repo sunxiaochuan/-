@@ -22,9 +22,10 @@ timezone:
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 # 如果您的网站存放在子目录中，例如 http://yoursite.com/blog，则请将您的 url 设为 http://yoursite.com/blog 并把 root 设为 /blog/
 # 网址
-url: http://www.soulapp.tech
+# url: http://www.soulapp.tech
+url: https://github.com/sunxiaochuan/blogappdist
 # 网站根目录
-root: /
+root: /blogappdist/
 # 文章的 永久链接 格式
 permalink: :year/:month/:day/:title/
 # 永久链接中各部分的默认值
@@ -127,7 +128,7 @@ theme: next
 deploy:
   type: git
   # 阿里云地址
-  repo: git@47.104.129.78:/home/git/hexo.git
+  # repo: git@47.104.129.78:/home/git/hexo.git
   # github 地址
-  # repo: https://github.com/sunxiaochuan/blogapp.git
+  repo: https://github.com/sunxiaochuan/blogappdist.git
   branch: master
